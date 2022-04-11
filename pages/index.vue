@@ -1,9 +1,11 @@
 <template>
   <div>
     <main v-if="page === 0">
-      <h1>MBTI 테스트✨</h1>
-      <h2>나의 MBTI를 확인해보세요!</h2>
-      <Button color="pink" text="테스트 시작!" :clickEvent="startTest" />
+      <h1>Marvel MBTI test✨</h1>
+      <img src="/home.png" alt="marvel logo" /> </br>
+      <img src="/heros.jpg" alt="marvel heros" />
+      <h2>Who is your Marvel Charactor?</h2>
+      <Button color="pink" text="Start!" :clickEvent="startTest" />
     </main>
     <main v-else-if="page < questions.length + 1">
       <Question />
@@ -28,3 +30,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+img {
+  width: 300px;
+}
+</style>

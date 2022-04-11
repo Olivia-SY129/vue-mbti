@@ -2,53 +2,53 @@ export const state = () => ({
   page: 0,
   questions: [
     {
-      q: "당신은 외향적입니까?",
+      q: "At a party do you",
       a: [
         {
-          text: "예",
+          text: "Interact with people, including strangers",
           value: "e",
         },
         {
-          text: "아니오",
+          text: "Interact with few, knwon to you",
           value: "i",
         },
       ],
     },
     {
-      q: "당신은 상상하는 것을 좋아합니까?",
+      q: "Are you more",
       a: [
         {
-          text: "예",
+          text: "Speculative than realistic",
           value: "n",
         },
         {
-          text: "아니오",
+          text: "Realistic than speculative",
           value: "s",
         },
       ],
     },
     {
-      q: "당신은 다른 사람에게 잘 공감합니까?",
+      q: "Are you more impressed by",
       a: [
         {
-          text: "예",
+          text: "Emotions",
           value: "f",
         },
         {
-          text: "아니오",
+          text: "Principles",
           value: "t",
         },
       ],
     },
     {
-      q: "당신은 즉흥적인 모임을 좋아합니까?",
+      q: "Do you prefer to work",
       a: [
         {
-          text: "예",
+          text: "Just 'Whenever'",
           value: "p",
         },
         {
-          text: "아니오",
+          text: "To deadlines",
           value: "j",
         },
       ],
