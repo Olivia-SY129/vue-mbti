@@ -2,54 +2,54 @@ export const state = () => ({
   page: 0,
   questions: [
     {
-      q: "질문 e-i",
+      q: "당신은 외향적입니까?",
       a: [
         {
-          text: "답변1-1",
+          text: "예",
           value: "e",
         },
         {
-          text: "답변1-2",
+          text: "아니오",
           value: "i",
         },
       ],
     },
     {
-      q: "질문2 s-n",
+      q: "당신은 상상하는 것을 좋아합니까?",
       a: [
         {
-          text: "답변2-1",
-          value: "s",
-        },
-        {
-          text: "답변2-2",
+          text: "예",
           value: "n",
         },
+        {
+          text: "아니오",
+          value: "s",
+        },
       ],
     },
     {
-      q: "질문3 t-f",
+      q: "당신은 다른 사람에게 잘 공감합니까?",
       a: [
         {
-          text: "답변3-1",
-          value: "t",
-        },
-        {
-          text: "답변3-2",
+          text: "예",
           value: "f",
         },
+        {
+          text: "아니오",
+          value: "t",
+        },
       ],
     },
     {
-      q: "질문4 j-p",
+      q: "당신은 즉흥적인 모임을 좋아합니까?",
       a: [
         {
-          text: "답변4-1",
-          value: "j",
+          text: "예",
+          value: "p",
         },
         {
-          text: "답변4-2",
-          value: "p",
+          text: "아니오",
+          value: "j",
         },
       ],
     },
@@ -94,7 +94,7 @@ export const actions = {
     commit("next");
   },
   clickAnswer({ commit }, answerType) {
-    commit("setUserType", answerType);
+    commit("setUserType", { answerType });
     commit("next");
   },
   clickReset({ commit }) {

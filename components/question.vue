@@ -16,7 +16,7 @@ import { mapActions, mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["questions", "page"]),
+    ...mapState(["questions", "page", "result"]),
     ...mapActions(["clickAnswer"]),
     question() {
       return this.questions[this.page - 1].q;
@@ -27,7 +27,22 @@ export default {
   },
   methods: {
     submitAnswer(params) {
-      return () => this.$store.dispatch("clickAnswer", params);
+      const result = this.result;
+      return () => {
+        this.$store.dispatch("clickAnswer", params);
+        if (this.page === this.questions.length + 1) {
+          this.$router.push({
+            name: "result-mbti",
+            params: {
+              mbti: `${result.e > result.i ? "e" : "i"}${
+                result.s > result.n ? "s" : "n"
+              }${result.t > result.f ? "t" : "f"}${
+                result.j > result.p ? "j" : "p"
+              }`,
+            },
+          });
+        }
+      };
     },
   },
 };

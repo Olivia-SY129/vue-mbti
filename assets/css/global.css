@@ -1,0 +1,12 @@
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #b9b9b9;
+  margin-bottom: 2em;
+}
